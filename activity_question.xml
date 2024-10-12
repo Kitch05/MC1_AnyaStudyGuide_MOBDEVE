@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+
+    android:id="@+id/main">
+
+  <androidx.cardview.widget.CardView
+      app:cardElevation="10dp"
+      app:cardCornerRadius="10dp"
+      android:layout_margin="5dp"
+      app:cardBackgroundColor="#FFFFFF"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <ImageView
+          android:layout_margin="10dp"
+          android:id="@+id/questionImage"
+          android:layout_width="120dp"
+          android:layout_height="150dp"/>
+
+      <LinearLayout
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/questionType"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_margin="10dp"
+            android:text="Question Type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </androidx.cardview.widget.CardView>
+
+  <TextView
+      android:id="@+id/questionText"
+      android:textColor="#000"
+      android:textStyle="bold"
+      android:textSize="25sp"
+      android:layout_margin="10dp"
+      android:text="Question"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  <EditText
+      android:id="@+id/answerText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginBottom="10dp"
+      android:layout_marginTop="10dp"/>
+
+  <Button
+      android:id="@+id/addbutton"
+      android:text="Submit"
+      android:onClick="submitAnswer"
+      android:layout_margin="10dp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+</LinearLayout>
